@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix_ui/core/colors/colors.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton(
+  const CustomButton(
       {super.key,
       required this.icon,
       required this.text,

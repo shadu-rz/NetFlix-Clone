@@ -1,3 +1,4 @@
+// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -36,10 +37,10 @@ class FastLaughBloc extends Bloc<FastLaughEvent, FastLaughState> {
 
       // get trending movies
 
-      final _result = await downloadService.getdownloadsImages();
+      final result = await downloadService.getdownloadsImages();
 
-      final _state = _result.fold(
-        (l) => FastLaughState(
+      final _state = result.fold(
+        (l) => const FastLaughState(
           videosList: [],
           isLoading: false,
           isError: true,
@@ -58,11 +59,13 @@ class FastLaughBloc extends Bloc<FastLaughEvent, FastLaughState> {
 
     on<LikeVideo>((event, emit) async {
       likedVideoesIdNotifier.value.add(event.id);
+      // ignore: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
       likedVideoesIdNotifier.notifyListeners();
     });
 
     on<UnlikeVideo>((event, emit) {
       likedVideoesIdNotifier.value.remove(event.id);
+      // ignore: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
       likedVideoesIdNotifier.notifyListeners();
     });
   }

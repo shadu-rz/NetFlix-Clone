@@ -142,14 +142,14 @@ class ComingSoonWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                  CustomButton(
+                  const CustomButton(
                     icon: Icons.all_out_sharp,
                     text: 'Remind Me',
                     iconsize: 20,
                     fontsize: 12,
                   ),
                   width,
-                  CustomButton(
+                  const CustomButton(
                     icon: Icons.info_outline_rounded,
                     text: 'Info',
                     iconsize: 20,

@@ -26,7 +26,7 @@ class EveryOneIsWatchingWidget extends StatelessWidget {
         height,
         Text(
           movieName,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
           ),
@@ -36,7 +36,7 @@ class EveryOneIsWatchingWidget extends StatelessWidget {
           description,
           maxLines: 4,
           overflow: TextOverflow.ellipsis,
-          style: TextStyle(
+          style: const TextStyle(
             color: greycolor,
           ),
         ),
@@ -45,7 +45,7 @@ class EveryOneIsWatchingWidget extends StatelessWidget {
         height,
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
-          children: [
+          children: const [
             CustomButton(
               icon: Icons.share,
               text: 'Share',
